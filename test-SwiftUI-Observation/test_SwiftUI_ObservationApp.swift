@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct test_SwiftUI_ObservationApp: App {
+    
+    @State var facade:Facade = .init()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -28,5 +31,6 @@ struct test_SwiftUI_ObservationApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+        .environment(facade)
     }
 }
