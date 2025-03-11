@@ -71,5 +71,6 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
-        //.environment(Facade.self, Facade())
+        .environment(Facade.self, Facade())
 }
+
